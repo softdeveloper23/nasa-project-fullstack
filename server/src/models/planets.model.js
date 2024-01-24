@@ -34,3 +34,7 @@ fs.createReadStream('kepler_data.csv') // createReadStream() reads the kepler_da
         console.log(`${habitablePlanets.length} habitable planets found!`); // Prints the number of habitable planets found by checking the number of objects in the array.
         console.log('Done processing the file!');
     });
+
+    models.exports = {
+        planets: habitablePlanets,
+    };
