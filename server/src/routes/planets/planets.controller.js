@@ -1,4 +1,4 @@
-const planets = require('../../models/planets.model');
+const {planets} = require('../../models/planets.model'); // Destructured import
 
 // This will be the controller function for the GET /planets endpoint
 function getAllPlanets(req, res) {
