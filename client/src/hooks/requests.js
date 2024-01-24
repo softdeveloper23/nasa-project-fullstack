@@ -16,10 +16,21 @@ async function httpGetLaunches() {
   });
 }
 
-  // Submit given launch data to launch system.
+// Submit given launch data to launch system.
 async function httpSubmitLaunch(launch) {
-
-
+  try {
+    return await fetch(`${API_URL}/launches`, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(launch),
+    });
+  } catch(err) {
+    return {
+      ok: false,
+    };
+  }
 }
 
 async function httpAbortLaunch(id) {
