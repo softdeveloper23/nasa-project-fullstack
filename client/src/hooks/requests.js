@@ -16,9 +16,10 @@ async function httpGetLaunches() {
   });
 }
 
-async function httpSubmitLaunch(launch) {
-  // TODO: Once API is ready.
   // Submit given launch data to launch system.
+async function httpSubmitLaunch(launch) {
+
+
 }
 
 async function httpAbortLaunch(id) {
