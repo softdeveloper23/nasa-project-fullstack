@@ -1,7 +1,12 @@
 // --- This code takes data from NASA's Kepler Telescope a filters over 9,500 planets to find 8 possibly habitable planets in the known galaxy. ---
 
-const { parse } = require('csv-parse'); // Destructuring the parse() function from csv-parse.
+// Built-ins
 const fs = require('fs'); // fs is a Node.js module that allows us to read and write files.
+const path = require('path');
+
+// Third party installs
+const { parse } = require('csv-parse'); // Destructuring the parse() function from csv-parse.
+
 
 const habitablePlanets = []; // Stores an array of JS objects from parse().
 
@@ -14,7 +19,7 @@ function isHabitablePlanet(planet) {
 
 function loadPlanetsData() {
     return new Promise((resolve, reject) => {
-        fs.createReadStream('kepler_data.csv') // createReadStream() reads the kepler_data.csv as a stream.
+        fs.createReadStream(path.join(__dirname, '..', '..', 'data', 'kepler_data.csv')) // createReadStream() reads the kepler_data.csv as a stream via a path module.
             .pipe(parse({ // .pipe connects both streams. It connects a readable stream source ('createReadStream()') to a writable stream destination ('parse()').
                 comment: '#', // Passed in an object providing two options (comment and columns).
                 columns: true, // 'comments:' lets the parser know the symbol for comments in the .csv
@@ -37,7 +42,7 @@ function loadPlanetsData() {
 }
 
 
-    models.exports = {
-        loadPlanetsData,
-        planets: habitablePlanets,
-    };
+module.exports = {
+    loadPlanetsData,
+    planets: habitablePlanets,
+};
