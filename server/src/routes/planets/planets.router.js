@@ -9,6 +9,6 @@ const {
 const planetsRouter = express.Router();
 
 // Create a new GET endpoint for /planets
-planetsRouter.get('/planets', httpGetAllPlanets);
+planetsRouter.get('/', httpGetAllPlanets);
 
 module.exports = planetsRouter;
