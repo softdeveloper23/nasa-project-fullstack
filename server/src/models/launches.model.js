@@ -37,6 +37,7 @@ function addNewLaunch(launch) {
 }
 
 module.exports = {
+    existLaunchWithId,
     getAllLaunches,
     addNewLaunch,
 };
