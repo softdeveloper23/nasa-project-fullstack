@@ -25,7 +25,7 @@ function httpAddNewLaunch(req, res) {
 }
 
 function httpAbortLaunch(req, res) {
-    const launchId = request.params.id;
+    const launchId = Number(request.params.id);
 
     if (!existLaunchWithId(launchId)) {
         return res.status(404).json({
