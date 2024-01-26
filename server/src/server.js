@@ -1,3 +1,7 @@
+// API is stateless, so we don't need to store any data in the server
+// We can store data in a database instead
+// We can use a library called mongoose to connect to a MongoDB database
+
 const http = require('http');
 
 const app = require('./app');
