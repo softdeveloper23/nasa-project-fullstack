@@ -2,6 +2,7 @@
 // Data persist between restarts
 
 const http = require('http');
+const mongoose = require('mongoose');
 
 const app = require('./app');
 
@@ -10,10 +11,22 @@ const { loadPlanetsData } = require('./models/planets.model')
 // Checks if there is a port specified in the environment or defaults to PORT 8000
 const PORT = process.env.PORT || 8000;
 
+const MONGO_URL = 'mongodb+srv://brannon1977:NO5oFa3OjlkMyKKi@cluster0.6m0xsyd.mongodb.net/?retryWrites=true&w=majority'
+
 // Creates a server that will listen to requests on the specified PORT
 const server = http.createServer(app);
 
+mongoose.connection.once('open', () => {
+    console.log('MongoDB connection ready!');
+});
+
+mongoose.connection.on('error', (err) => {
+    console.error(err);
+});
+
 async function startServer() {
+    // Connects to the MongoDB database
+    await mongoose.connect(MONGO_URL);
     await loadPlanetsData();
 
     // Starts the server
