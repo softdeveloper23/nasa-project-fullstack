@@ -1,6 +1,5 @@
-// API is stateless, so we don't need to store any data in the server
-// We can store data in a database instead
-// We can use a library called mongoose to connect to a MongoDB database
+// API is stateless for cluster mode
+// Data persist between restarts
 
 const http = require('http');
 
