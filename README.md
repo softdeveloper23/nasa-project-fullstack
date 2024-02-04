@@ -36,6 +36,6 @@ The application is built using the MERN stack, which includes:
 
 The application is containerized with Docker and deployed to AWS (Amazon Web Services), ensuring scalability and reliability. AWS services provide the infrastructure necessary to host and manage the application, allowing it to handle large-scale user access and data processing.
 
-## See it in action:
+## See it in action
 
 Visit the link in the About section to see the project live. You can create launches and delete launches as well as see historic launches from SpaceX.
