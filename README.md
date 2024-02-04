@@ -4,9 +4,9 @@
 
 This repository contains the NASA Project, a full-stack application developed as part of the "Complete Node.js Developer: Zero to Mastery" course. The project simulates a NASA dashboard for managing space missions and leverages real-life data, including the SpaceX API, to create a comprehensive launch system for discovering new planets.
 
-## Chart
+## NASA Mission Control Diagram
 
-![Project screenshot](NASA Mission Control Diagram/nasa-mission-control-diagram.png)
+![Project screenshot](diagram/nasa-mission-control-diagram.png)
 
 
 
