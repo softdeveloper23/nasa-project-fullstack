@@ -6,7 +6,7 @@ This repository contains the NASA Project, a full-stack application developed as
 
 ## Chart
 
-![Alt text for the image](/path/to/image.jpg)
+![Project screenshot](NASA Mission Control Diagram/nasa-mission-control-diagram.png)
 
 
 
